@@ -13,10 +13,27 @@ Pizza.prototype.price = function(toppings, size){
   smallPizzaPrice = 12
   mediumPizzaPrice = 15
   largePizzaPrice = 18
+  debugger;
   for (i=1;i<=toppings.length;i++){
     var numberOfToppings = i;
   };
-    if (size === "personal") {
+    if (size === undefined) {
+      alert("Please choose a pizza size to submit an order.");
+  } else if ((size === "personal") || (size === "small") ||  (size === "medium") || (size === "large") && (numberOfToppings === undefined)) {
+      confirm("Are you sure you don't want any toppings?")
+      if (size === "personal"){
+        return personalPizzaPrice;
+      } else if (size === "small") {
+        return smallPizzaPrice;
+      } else if (size === "medium") {
+        return mediumPizzaPrice;
+      } else if (size === "large") {
+        console.log("I'm here")
+        return largePizzaPrice;
+        }
+  } else if ((size === "personal") && (numberOfToppings > 1)) {
+      alert("Please only choose 1 topping for your personal size pizza.");
+  } else if (size === "personal") {
       return personalPizzaPrice;
   } else if ((numberOfToppings === 1) && (size === "medium")) {
       return mediumPizzaPrice + 2;
@@ -90,6 +107,7 @@ $(document).ready(function(){
       toppingChoice.push(toppings);
     });
     var pizzaSize = $("input:radio[name=size]:checked").val();
+    console.log(pizzaSize);
     var pizzaResult = new Pizza(toppingChoice, pizzaSize);
     var priceResult = pizzaResult.price(toppingChoice, pizzaSize);
     var finalPizzaPrice = pizzaResult.tax(priceResult).toFixed(2);
