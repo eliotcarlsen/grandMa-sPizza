@@ -3,6 +3,11 @@ function Pizza (toppings, size){
   this.size = size;
 };
 
+Pizza.prototype.tax = function(pizzaPrice){
+  var finalPizzaPrice = pizzaPrice + (pizzaPrice * 0.065);
+  return finalPizzaPrice;
+};
+
 Pizza.prototype.price = function(toppings, size){
   personalPizzaPrice = 6
   smallPizzaPrice = 12
@@ -11,9 +16,8 @@ Pizza.prototype.price = function(toppings, size){
   for (i=1;i<=toppings.length;i++){
     var numberOfToppings = i;
   };
-  if (size === "personal") {
-    console.log("here");
-    return personalPizzaPrice;
+    if (size === "personal") {
+      return personalPizzaPrice;
   } else if ((numberOfToppings === 1) && (size === "medium")) {
       return mediumPizzaPrice + 2;
   } else if ((numberOfToppings === 1) && (size === "small")) {
@@ -88,6 +92,7 @@ $(document).ready(function(){
     var pizzaSize = $("input:radio[name=size]:checked").val();
     var pizzaResult = new Pizza(toppingChoice, pizzaSize);
     var priceResult = pizzaResult.price(toppingChoice, pizzaSize);
-    $(".pizzaPrice").show().text("Thank you for your order!  Your pizza is $" + priceResult + " upon delivery.");
+    var finalPizzaPrice = pizzaResult.tax(priceResult).toFixed(2);
+    $(".pizzaPrice").show().text("Thank you for your order!  Your pizza is $" + finalPizzaPrice + " upon delivery.");
   });
 });
