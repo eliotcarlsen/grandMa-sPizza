@@ -10,9 +10,10 @@ _Specs:_
 _Program has a pizza object that has toppings and size_
 _Program can take input from a user about their preferred topping (1)_
 _Program can take input from a user about their preferred size_
-_Program can take input for multiple toppings_
+_Program can create pizza object based on user inputs for size,topping_
 _Program can calculate price for pizzas based on size_
 _Program can calculate price for pizzas based on toppings_
+_Program can take input for multiple toppings_
 _Program can display price for pizzas on HTML page_
 
 ## Setup/Installation Requirements
