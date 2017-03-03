@@ -4,13 +4,17 @@ function Pizza (toppings, size){
 };
 
 Pizza.prototype.price = function(toppings, size){
+  personalPizzaPrice = 6
   smallPizzaPrice = 12
   mediumPizzaPrice = 15
   largePizzaPrice = 18
   for (i=1;i<=toppings.length;i++){
     var numberOfToppings = i;
   };
-    if ((numberOfToppings === 1) && (size === "medium")) {
+  if (size === "personal") {
+    console.log("here");
+    return personalPizzaPrice;
+  } else if ((numberOfToppings === 1) && (size === "medium")) {
       return mediumPizzaPrice + 2;
   } else if ((numberOfToppings === 1) && (size === "small")) {
       return smallPizzaPrice + 2;
@@ -84,6 +88,6 @@ $(document).ready(function(){
     var pizzaSize = $("input:radio[name=size]:checked").val();
     var pizzaResult = new Pizza(toppingChoice, pizzaSize);
     var priceResult = pizzaResult.price(toppingChoice, pizzaSize);
-    $("#pizzaPrice").text("Your pizza is $" + priceResult + " upon delivery.");
+    $(".pizzaPrice").show().text("Thank you for your order!  Your pizza is $" + priceResult + " upon delivery.");
   });
 });
