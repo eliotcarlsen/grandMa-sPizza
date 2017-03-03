@@ -3,9 +3,12 @@ function Pizza (toppings, size){
   this.size = size;
 };
 
-Pizza.prototype.price = function(toppingChoice, pizzaSize){
-  if ((toppingChoice === "pepperoni") && (pizzaSize === "large")) {
-    return "25 dollars";
+Pizza.prototype.price = function(toppings, size){
+  smallPizzaPrice = 12
+  mediumPizzaPrice = 15
+  largePizzaPrice = 18
+  if ((toppings === "pepperoni") && (size === "large")) {
+    return largePizzaPrice + 3;
   };
 };
 

@@ -12,7 +12,7 @@
     <div class="container">
       <form class="pizzaInputFields">
         <div class="radio">
-          <label for="Size">
+          <label for="size">
           <input type="radio" name="size" value="small">
           Small
         </label>
@@ -29,17 +29,19 @@
           Large
         </label>
         </div>
-        <div class="radio">
-          <label for="toppings">
-            <input type="radio" name="topping" value="pepperoni">
-            Pepperoni
-          </label>
-        </div>
-        <div class="radio">
-          <label for="toppings">
-            <input type="radio" name="topping" value="mushrooms">
-            Mushrooms
-          </label>
+        <div class="form-group">
+          <h5>Choose your toppings.</h5>
+          <h6>First topping is $2 with each additional topping $1/each.</h6>
+          <input type="checkbox" name="topping" value="1">Pepperoni<br>
+          <input type="checkbox" name="topping" value="1">Sausage<br>
+          <input type="checkbox" name="topping" value="1">Canadian Bacon<br>
+          <input type="checkbox" name="topping" value="1">Chicken<br>
+          <input type="checkbox" name="topping" value="1">Mushrooms<br>
+          <input type="checkbox" name="topping" value="1">Olives<br>
+          <input type="checkbox" name="topping" value="1">Green Peppers<br>
+          <input type="checkbox" name="topping" value="1">Onions<br>
+          <input type="checkbox" name="topping" value="1">Anchovies<br>
+          <input type="checkbox" name="topping" value="1">Jalepeños<br>
         </div>
         <button type="submit" name="button">Confirm your order</button>
       </form>
