@@ -11,65 +11,65 @@ Pizza.prototype.price = function(toppings, size){
     var numberOfToppings = i;
   };
     if ((numberOfToppings === 1) && (size === "medium")) {
-    return mediumPizzaPrice + 2;
+      return mediumPizzaPrice + 2;
   } else if ((numberOfToppings === 1) && (size === "small")) {
-    return smallPizzaPrice + 2;
+      return smallPizzaPrice + 2;
   } else if ((numberOfToppings === 1) && (size === "large")) {
-    return largePizzaPrice + 2;
+      return largePizzaPrice + 2;
   } else if ((numberOfToppings === 2) && (size === "large")) {
-    return largePizzaPrice + 3;
+      return largePizzaPrice + 3;
   } else if ((numberOfToppings === 2) && (size === "medium")) {
-    return mediumPizzaPrice + 3;
+      return mediumPizzaPrice + 3;
   } else if ((numberOfToppings === 2) && (size === "small")) {
-    return smallPizzaPrice + 3;
+      return smallPizzaPrice + 3;
   } else if ((numberOfToppings === 3) && (size === "medium")) {
-    return mediumPizzaPrice + 4;
+      return mediumPizzaPrice + 4;
   } else if ((numberOfToppings === 3) && (size === "small")) {
-    return smallPizzaPrice + 4;
+      return smallPizzaPrice + 4;
   } else if ((numberOfToppings === 3) && (size === "large")) {
-    return largePizzaPrice + 4;
+      return largePizzaPrice + 4;
   } else if ((numberOfToppings === 4) && (size === "small")) {
-    return smallPizzaPrice + 5;
+      return smallPizzaPrice + 5;
   } else if ((numberOfToppings === 4) && (size === "medium")) {
-    return mediumPizzaPrice + 5;
+      return mediumPizzaPrice + 5;
   } else if ((numberOfToppings === 4) && (size === "large")) {
-    return largePizzaPrice + 5;
+      return largePizzaPrice + 5;
   } else if ((numberOfToppings === 5) && (size === "small")) {
-    return smallPizzaPrice + 6;
+      return smallPizzaPrice + 6;
   } else if ((numberOfToppings === 5) && (size === "medium")) {
-    return mediumPizzaPrice + 6;
+      return mediumPizzaPrice + 6;
   } else if ((numberOfToppings === 5) && (size === "large")) {
-    return largePizzaPrice + 6;
+      return largePizzaPrice + 6;
   } else if ((numberOfToppings === 6) && (size === "small")) {
-    return smallPizzaPrice + 7;
+      return smallPizzaPrice + 7;
   } else if ((numberOfToppings === 6) && (size === "medium")) {
-    return mediumPizzaPrice + 7;
+      return mediumPizzaPrice + 7;
   } else if ((numberOfToppings === 6) && (size === "large")) {
-    return largePizzaPrice + 7;
+      return largePizzaPrice + 7;
   } else if ((numberOfToppings === 7) && (size === "small")) {
-    return smallPizzaPrice + 8;
+      return smallPizzaPrice + 8;
   } else if ((numberOfToppings === 7) && (size === "medium")) {
-    return mediumPizzaPrice + 8;
+      return mediumPizzaPrice + 8;
   } else if ((numberOfToppings === 7) && (size === "large")) {
-    return largePizzaPrice + 8;
+      return largePizzaPrice + 8;
   } else if ((numberOfToppings === 8) && (size === "small")) {
-    return smallPizzaPrice + 9;
+      return smallPizzaPrice + 9;
   } else if ((numberOfToppings === 8) && (size === "medium")) {
-    return mediumPizzaPrice + 9;
+      return mediumPizzaPrice + 9;
   } else if ((numberOfToppings === 8) && (size === "large")) {
-    return largePizzaPrice + 9;
+      return largePizzaPrice + 9;
   } else if ((numberOfToppings === 9) && (size === "small")) {
-    return smallPizzaPrice + 10;
+      return smallPizzaPrice + 10;
   } else if ((numberOfToppings === 9) && (size === "medium")) {
-    return mediumPizzaPrice + 10;
+      return mediumPizzaPrice + 10;
   } else if ((numberOfToppings === 9) && (size === "large")) {
-    return largePizzaPrice + 10;
+      return largePizzaPrice + 10;
   } else if ((numberOfToppings === 10) && (size === "small")) {
-    return smallPizzaPrice + 11;
+      return smallPizzaPrice + 11;
   } else if ((numberOfToppings === 10) && (size === "medium")) {
-    return mediumPizzaPrice + 11;
+      return mediumPizzaPrice + 11;
   } else if ((numberOfToppings === 10) && (size === "large")) {
-    return largePizzaPrice + 11;
+      return largePizzaPrice + 11;
   };
 };
 
@@ -84,10 +84,6 @@ $(document).ready(function(){
     var pizzaSize = $("input:radio[name=size]:checked").val();
     var pizzaResult = new Pizza(toppingChoice, pizzaSize);
     var priceResult = pizzaResult.price(toppingChoice, pizzaSize);
-    $("#pizzaPrice").text("Your pizza is $" + priceResult + " upon delivery.")
-
-
-
-
-  })
-})
+    $("#pizzaPrice").text("Your pizza is $" + priceResult + " upon delivery.");
+  });
+});

@@ -1,0 +1,13 @@
+.jumbotron {
+  background-color: #b22020;
+}
+
+.col-lg-4 {
+  background-color: white;
+  float: right;
+}
+
+.col-lg-3 {
+  background-color: white;
+  float: left;
+}
