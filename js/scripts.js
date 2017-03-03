@@ -7,8 +7,23 @@ Pizza.prototype.price = function(toppings, size){
   smallPizzaPrice = 12
   mediumPizzaPrice = 15
   largePizzaPrice = 18
-  if ((toppings === "pepperoni") && (size === "large")) {
-    return largePizzaPrice + 3;
+  for (i=1;i<=toppings.length;i++){
+    if ((i === 1) && (size === "large")) {
+      console.log("I'm here")
+      return largePizzaPrice + 2;
+    }else if {
+
+    }
+
+
+
+
+
+
+
+
+
+
   };
 };
 
@@ -19,9 +34,14 @@ Pizza.prototype.price = function(toppings, size){
 $(document).ready(function(){
   $("form").submit(function(event){
     event.preventDefault();
-    var toppingChoice = $("input:radio[name=topping]:checked").val();
-    var pizzaSize = $("input:radio[name=size]:checked").val();
+    var toppingChoice = [];
+    $("input:checkbox[name=topping]:checked").each(function(){
+      var toppings = $(this).val();
+      toppingChoice.push(toppings);
+      console.log(toppings);
+    });
     console.log(toppingChoice);
+    var pizzaSize = $("input:radio[name=size]:checked").val();
     console.log(pizzaSize);
     var pizzaResult = new Pizza(toppingChoice, pizzaSize);
     var priceResult = pizzaResult.price(toppingChoice, pizzaSize);
