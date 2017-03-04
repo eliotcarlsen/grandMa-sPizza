@@ -89,7 +89,6 @@ Pizza.prototype.price = function(toppings, size){
   };
 };
 
-
 $(document).ready(function(){
   $("form").submit(function(event){
     event.preventDefault();
