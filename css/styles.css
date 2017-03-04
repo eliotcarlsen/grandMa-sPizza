@@ -2,13 +2,13 @@
   background-color: #b22020;
 }
 
-.col-lg-4 {
+#toppingOptions {
   background-color: #b22020;
   float: right;
   margin-right: 10px;
 }
 
-.col-lg-3 {
+.col-lg-6 {
   background-color: #b22020;
   float: left;
   margin-left: 10px;

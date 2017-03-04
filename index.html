@@ -22,8 +22,21 @@
           <h5>Large pizzas start at $18.</h5>
         </div>
         <br>
-        <div class="col-lg-3">
+        <div class="col-lg-6">
           <form class="pizzaInputFields">
+            <h5>Will this order be for pick up or delivery?</h5>
+            <div class="radio">
+              <div class="radio">
+                <label for="size">
+                <input type="radio" name="pickUpOrDelivery" value="pick up" required>
+                Pick Up
+              </label>
+              </div>
+              <label for="size">
+              <input type="radio" name="pickUpOrDelivery" value="delivery" required>
+              Delivery
+            </label>
+            </div>
             <h5>Choose your Pizza size.</h5>
             <div class="radio">
               <div class="radio">
@@ -50,7 +63,7 @@
             </label>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-5" id="toppingOptions">
             <div class="form-group">
               <h5>Choose your toppings.</h5>
               <h6>First additional topping is $2 with each additional topping adding $1/each.</h6>

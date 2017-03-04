@@ -98,10 +98,10 @@ $(document).ready(function(){
       toppingChoice.push(toppings);
     });
     var pizzaSize = $("input:radio[name=size]:checked").val();
-    console.log(pizzaSize);
     var pizzaResult = new Pizza(toppingChoice, pizzaSize);
     var priceResult = pizzaResult.price(toppingChoice, pizzaSize);
     var finalPizzaPrice = pizzaResult.tax(priceResult).toFixed(2);
-    $(".pizzaPrice").show().text("Thank you for your order!  Your pizza is $" + finalPizzaPrice + " upon delivery.");
+    var pickUpOrDelivery = $("input:radio[name=pickUpOrDelivery]:checked").val();
+    $(".pizzaPrice").show().text("Thank you for your order!  Your pizza is $" + finalPizzaPrice + " upon " + pickUpOrDelivery + ".");
   });
 });
