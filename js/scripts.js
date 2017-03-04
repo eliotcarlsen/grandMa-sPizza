@@ -102,6 +102,6 @@ $(document).ready(function(){
     var priceResult = pizzaResult.price(toppingChoice, pizzaSize);
     var finalPizzaPrice = pizzaResult.tax(priceResult).toFixed(2);
     var pickUpOrDelivery = $("input:radio[name=pickUpOrDelivery]:checked").val();
-    $(".pizzaPrice").show().text("Thank you for your order!  Your pizza is $" + finalPizzaPrice + " upon " + pickUpOrDelivery + ".");
+    $(".pizzaPrice").show().text("Thank you for your order!  You are confirmed for a " + pizzaSize + " pizza with " + toppingChoice + ".  Your pizza will be $" + finalPizzaPrice + " upon " + pickUpOrDelivery + ".");
   });
 });
